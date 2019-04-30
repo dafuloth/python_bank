@@ -1,0 +1,10 @@
+[
+  "test_acceptance.py::test_acceptance_criteria",
+  "test_account.py::test_account",
+  "test_account.py::test_open_account_with_balance",
+  "test_account.py::test_deposit",
+  "test_account.py::test_withdraw",
+  "test_features.py::test_deposit_money_into_account",
+  "test_features.py::test_withdraw_money_from_account",
+  "test_features.py::test_print_statement"
+]
