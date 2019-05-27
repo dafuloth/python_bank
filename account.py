@@ -35,6 +35,6 @@ class Account(object):
         statement += ("%.2f" % transaction[4]).ljust(8) + "|| "  
     
       statement += ("%.2f" % transaction[5]) + "\n"
-
+    
     print(statement)
-  
+    

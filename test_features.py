@@ -13,25 +13,21 @@ def test_withdraw_money_from_account():
   assert my_account.balance == 275
 
 def test_print_statement(capsys):
+
   print_account = account.Account()
   print_account.deposit("26-04-2019", 1500)
   print_account.withdraw("29-04-2019", 225)
 
-  expected = "date".ljust(11) + "|| credit".ljust(11) + "|| debit".ljust(11)
-  expected += "|| balance\n"
-
-  expected += "29/04/2019".ljust(11) + "||".ljust(11) + "|| 225.00".ljust(11) + "|| 1275.00\n"
-  expected += "26/04/2019".ljust(11) + "|| 1500.00".ljust(11) + "||".ljust(11) + "|| 1500.00\n"
-
-  print(expected)
-
-  expected = capsys.readouterr()
-
-  expected_output = expected.out
+  expected = """date       || credit  || debit   || balance
+29/04/2019 ||         || 225.00  || 1275.00
+26/04/2019 || 1500.00 ||         || 1500.00"""
+# 29/04/2019 ||         || 225.00  || 1275.00
+# 26/04/2019 || 1500.00 ||         || 1500.00
 
   print_account.print_statement()
 
   actual = capsys.readouterr()
+
   actual_output = actual.out
 
-  assert expected_output == actual_output
+  assert actual_output.startswith(expected)
