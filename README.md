@@ -2,11 +2,33 @@
 
 # Bank Tech Test in Python
 
-_TODO: after-action report_
+This is a solution by TDD for the Bank Tech Test in `Python`, with `pytest` for tests and `pylint` for code quality & linting. 
 
 Source: <https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md>
 
 *Requirements* and *Acceptance Criteria* copied from source text
+
+## The Feature Test
+
+This is the result of running the [Acceptance Criteria](#acceptance-criteria) on the finished solution:
+
+![Passing the Feature Test](./readme/feature_test.png)
+
+## Python Versions
+
+This was developed in Python 3.7(.3)
+
+## Running the tests
+Every new push triggers Travis CI to build and run tests. Here is output showing 100% tests passing:
+![Travis CI build, tests passing](./readme/passing.png)
+
+To run tests yourself, clone the repository and ensure you have `pytest`, or run `pip install -r requirements.txt` with the `requirements.txt` file (created via `pip freeze > requirements.txt`). Then you can run `pytest`
+
+## Code quality
+
+I used `pylint` to for linting and checking code quality:
+
+![Linting with pylint](./readme/pylint.png)
 
 ## Specification
 
